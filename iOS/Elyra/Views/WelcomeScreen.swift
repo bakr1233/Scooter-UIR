@@ -2,108 +2,110 @@ import SwiftUI
 
 struct WelcomeScreen: View {
     var body: some View {
-        ZStack {
-            Color.black
-                .ignoresSafeArea()
-            
-            VStack(spacing: 0) {
-                // Status Bar
-                StatusBarView()
+        GeometryReader { geometry in
+            ZStack {
+                Color.black
+                    .ignoresSafeArea()
                 
-                // Logo Section
-                HStack(spacing: 10) {
-                    // Logo Icon with Gradient
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 8)
-                            .fill(
+                VStack(spacing: 0) {
+                    // Status Bar
+                    StatusBarView()
+                    
+                    // Logo Section
+                    HStack(spacing: 10) {
+                        // Logo Icon with Gradient
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 8)
+                                .fill(
+                                    LinearGradient(
+                                        colors: [.red, .purple, .blue],
+                                        startPoint: .topLeading,
+                                        endPoint: .bottomTrailing
+                                    )
+                                )
+                                .frame(width: 40, height: 40)
+                            
+                            Text("e")
+                                .font(.system(size: 24, weight: .bold))
+                                .foregroundColor(.white)
+                        }
+                        
+                        // Logo Text with Gradient
+                        Text("Elyra")
+                            .font(.system(size: 28, weight: .bold))
+                            .foregroundStyle(
                                 LinearGradient(
-                                    colors: [.red, .purple, .blue],
-                                    startPoint: .topLeading,
-                                    endPoint: .bottomTrailing
+                                    colors: [Color(red: 0.545, green: 0, blue: 0), .purple],
+                                    startPoint: .leading,
+                                    endPoint: .trailing
                                 )
                             )
-                            .frame(width: 40, height: 40)
-                        
-                        Text("e")
-                            .font(.system(size: 24, weight: .bold))
-                            .foregroundColor(.white)
                     }
+                    .padding(.horizontal, 20)
+                    .padding(.top, 20)
                     
-                    // Logo Text with Gradient
-                    Text("Elyra")
-                        .font(.system(size: 28, weight: .bold))
-                        .foregroundStyle(
+                    // Scooter Visualization
+                    ScooterView()
+                        .frame(maxWidth: .infinity)
+                        .frame(height: geometry.size.height * 0.4)
+                    
+                    Spacer()
+                    
+                    // Welcome Section
+                    VStack(alignment: .leading, spacing: 15) {
+                        HStack(spacing: 4) {
+                            Text("Welcome")
+                                .font(.system(size: 36, weight: .bold))
+                                .foregroundColor(.white)
+                            
+                            Circle()
+                                .fill(Color.red)
+                                .frame(width: 8, height: 8)
+                        }
+                        
+                        (Text("Bienvenue chez ") + Text("Elyra").fontWeight(.semibold).foregroundColor(.white) + Text(" — la solution de mobilité électrique qui facilite les déplacements au sein du campus. Grâce à nos scooters écologiques et silencieux, se déplacer entre les bâtiments devient plus rapide, pratique et respectueux de l'environnement. Avec Elyra, la mobilité universitaire entre dans une nouvelle ère."))
+                            .font(.system(size: 15))
+                            .foregroundColor(Color(white: 0.8))
+                            .lineSpacing(4)
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 30)
+                    
+                    // Get Started Button
+                    Button(action: {
+                        // Handle button action
+                    }) {
+                        HStack(spacing: 12) {
+                            ZStack {
+                                Circle()
+                                    .stroke(Color.white, lineWidth: 1.5)
+                                    .frame(width: 32, height: 32)
+                                
+                                Text("→")
+                                    .font(.system(size: 16, weight: .bold))
+                                    .foregroundColor(.white)
+                            }
+                            
+                            Text("Get Started...")
+                                .font(.system(size: 16, weight: .semibold))
+                                .foregroundColor(.white)
+                            
+                            Spacer()
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 16)
+                        .background(
                             LinearGradient(
-                                colors: [Color(red: 0.545, green: 0, blue: 0), .purple],
+                                colors: [Color(red: 0.1, green: 0.1, blue: 0.18), Color(red: 0.545, green: 0, blue: 0)],
                                 startPoint: .leading,
                                 endPoint: .trailing
                             )
                         )
-                }
-                .padding(.horizontal, 20)
-                .padding(.top, 20)
-                
-                // Scooter Visualization
-                ScooterView()
-                    .frame(maxWidth: .infinity)
-                    .frame(height: UIScreen.main.bounds.height * 0.4)
-                
-                Spacer()
-                
-                // Welcome Section
-                VStack(alignment: .leading, spacing: 15) {
-                    HStack(spacing: 4) {
-                        Text("Welcome")
-                            .font(.system(size: 36, weight: .bold))
-                            .foregroundColor(.white)
-                        
-                        Circle()
-                            .fill(Color.red)
-                            .frame(width: 8, height: 8)
-                    }
-                    
-                    (Text("Bienvenue chez ") + Text("Elyra").fontWeight(.semibold).foregroundColor(.white) + Text(" — la solution de mobilité électrique qui facilite les déplacements au sein du campus. Grâce à nos scooters écologiques et silencieux, se déplacer entre les bâtiments devient plus rapide, pratique et respectueux de l'environnement. Avec Elyra, la mobilité universitaire entre dans une nouvelle ère."))
-                        .font(.system(size: 15))
-                        .foregroundColor(Color(white: 0.8))
-                        .lineSpacing(4)
-                }
-                .padding(.horizontal, 20)
-                .padding(.bottom, 30)
-                
-                // Get Started Button
-                Button(action: {
-                    // Handle button action
-                }) {
-                    HStack(spacing: 12) {
-                        ZStack {
-                            Circle()
-                                .stroke(Color.white, lineWidth: 1.5)
-                                .frame(width: 32, height: 32)
-                            
-                            Text("→")
-                                .font(.system(size: 16, weight: .bold))
-                                .foregroundColor(.white)
-                        }
-                        
-                        Text("Get Started...")
-                            .font(.system(size: 16, weight: .semibold))
-                            .foregroundColor(.white)
-                        
-                        Spacer()
+                        .cornerRadius(30)
                     }
                     .padding(.horizontal, 20)
-                    .padding(.vertical, 16)
-                    .background(
-                        LinearGradient(
-                            colors: [Color(red: 0.1, green: 0.1, blue: 0.18), Color(red: 0.545, green: 0, blue: 0)],
-                            startPoint: .leading,
-                            endPoint: .trailing
-                        )
-                    )
-                    .cornerRadius(30)
+                    .padding(.bottom, 40)
                 }
-                .padding(.horizontal, 20)
-                .padding(.bottom, 40)
             }
         }
     }
@@ -159,8 +161,6 @@ struct StatusBarView: View {
 
 // Scooter View
 struct ScooterView: View {
-    @State private var screenHeight: CGFloat = UIScreen.main.bounds.height
-    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
