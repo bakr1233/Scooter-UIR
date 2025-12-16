@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		B1000001A1A1A1A1 /* ElyraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1A0 /* ElyraApp.swift */; };
 		B1000001A1A1A1A3 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1A2 /* WelcomeScreen.swift */; };
+		B1000001A1A1A1AC /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1AD /* LoginScreen.swift */; };
+		B1000001A1A1A1B4 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1B3 /* MapScreen.swift */; };
+		B1000001A1A1A1B5 /* ScooterDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1B6 /* ScooterDetailScreen.swift */; };
 		B1000001A1A1A1A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1A4 /* Assets.xcassets */; };
 		B1000001A1A1A1A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1A7 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -17,6 +20,9 @@
 		B1000001A1A1A19D /* Elyra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elyra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1000001A1A1A1A0 /* ElyraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElyraApp.swift; sourceTree = "<group>"; };
 		B1000001A1A1A1A2 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
+		B1000001A1A1A1AD /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		B1000001A1A1A1B3 /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
+		B1000001A1A1A1B6 /* ScooterDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterDetailScreen.swift; sourceTree = "<group>"; };
 		B1000001A1A1A1A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1000001A1A1A1A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B1000001A1A1A1A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +79,9 @@
 			isa = PBXGroup;
 			children = (
 				B1000001A1A1A1A2 /* WelcomeScreen.swift */,
+				B1000001A1A1A1AD /* LoginScreen.swift */,
+				B1000001A1A1A1B3 /* MapScreen.swift */,
+				B1000001A1A1A1B6 /* ScooterDetailScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,6 +157,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1000001A1A1A1A3 /* WelcomeScreen.swift in Sources */,
+				B1000001A1A1A1AC /* LoginScreen.swift in Sources */,
+				B1000001A1A1A1B4 /* MapScreen.swift in Sources */,
+				B1000001A1A1A1B5 /* ScooterDetailScreen.swift in Sources */,
 				B1000001A1A1A1A1 /* ElyraApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
