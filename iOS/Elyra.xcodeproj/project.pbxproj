@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		B1000001A1A1A1A1 /* ElyraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1A0 /* ElyraApp.swift */; };
 		B1000001A1A1A1A3 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1A2 /* WelcomeScreen.swift */; };
+		B1000001A1A1A1A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1A4 /* Assets.xcassets */; };
+		B1000001A1A1A1A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1A7 /* Preview Assets.xcassets */; };
 		B1000001A1A1A1AC /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1AD /* LoginScreen.swift */; };
 		B1000001A1A1A1B4 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1B3 /* MapScreen.swift */; };
 		B1000001A1A1A1B5 /* ScooterDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1B6 /* ScooterDetailScreen.swift */; };
-		B1000001A1A1A1A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1A4 /* Assets.xcassets */; };
-		B1000001A1A1A1A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1A7 /* Preview Assets.xcassets */; };
+		B1000001A1A1A1B7 /* QRCodeScannerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1B8 /* QRCodeScannerScreen.swift */; };
+		B1000001A1A1A1B9 /* ManualCodeEntryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1BA /* ManualCodeEntryScreen.swift */; };
+		B1000001A1A1A1BB /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1BC /* ProfileScreen.swift */; };
+		B1000001A1A1A1BD /* WalletTopUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000001A1A1A1BE /* WalletTopUpScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B1000001A1A1A19D /* Elyra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elyra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1000001A1A1A1A0 /* ElyraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElyraApp.swift; sourceTree = "<group>"; };
 		B1000001A1A1A1A2 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
-		B1000001A1A1A1AD /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
-		B1000001A1A1A1B3 /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
-		B1000001A1A1A1B6 /* ScooterDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterDetailScreen.swift; sourceTree = "<group>"; };
 		B1000001A1A1A1A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1000001A1A1A1A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B1000001A1A1A1A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1000001A1A1A1AD /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		B1000001A1A1A1B3 /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
+		B1000001A1A1A1B6 /* ScooterDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScooterDetailScreen.swift; sourceTree = "<group>"; };
+		B1000001A1A1A1B8 /* QRCodeScannerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerScreen.swift; sourceTree = "<group>"; };
+		B1000001A1A1A1BA /* ManualCodeEntryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualCodeEntryScreen.swift; sourceTree = "<group>"; };
+		B1000001A1A1A1BC /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		B1000001A1A1A1BE /* WalletTopUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTopUpScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,10 @@
 				B1000001A1A1A1AD /* LoginScreen.swift */,
 				B1000001A1A1A1B3 /* MapScreen.swift */,
 				B1000001A1A1A1B6 /* ScooterDetailScreen.swift */,
+				B1000001A1A1A1B8 /* QRCodeScannerScreen.swift */,
+				B1000001A1A1A1BA /* ManualCodeEntryScreen.swift */,
+				B1000001A1A1A1BC /* ProfileScreen.swift */,
+				B1000001A1A1A1BE /* WalletTopUpScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +172,10 @@
 				B1000001A1A1A1AC /* LoginScreen.swift in Sources */,
 				B1000001A1A1A1B4 /* MapScreen.swift in Sources */,
 				B1000001A1A1A1B5 /* ScooterDetailScreen.swift in Sources */,
+				B1000001A1A1A1B7 /* QRCodeScannerScreen.swift in Sources */,
+				B1000001A1A1A1B9 /* ManualCodeEntryScreen.swift in Sources */,
+				B1000001A1A1A1BB /* ProfileScreen.swift in Sources */,
+				B1000001A1A1A1BD /* WalletTopUpScreen.swift in Sources */,
 				B1000001A1A1A1A1 /* ElyraApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,4 +385,3 @@
 	};
 	rootObject = B1000001A1A1A195 /* Project object */;
 }
-
