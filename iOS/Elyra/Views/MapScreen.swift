@@ -3,6 +3,7 @@ import MapKit
 
 struct MapScreen: View {
     @State private var selectedScooter: ScooterType? = nil
+    @State private var showProfile = false
     @State private var cameraPosition: MapCameraPosition = .region(
         MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: 33.9981, longitude: -6.8480), // Rabat, Morocco approximate
@@ -25,7 +26,7 @@ struct MapScreen: View {
                     .mapStyle(.standard)
                     .ignoresSafeArea()
                     
-                    // Status Bar Overlay
+                    // Status Bar and Profile Button Overlay
                     VStack {
                         HStack {
                             Text("9:41")
@@ -70,6 +71,33 @@ struct MapScreen: View {
                         .padding(.top, 10)
                         .padding(.bottom, 5)
                         
+                        // Profile Button
+                        HStack {
+                            Spacer()
+                            
+                            Button(action: {
+                                showProfile = true
+                            }) {
+                                ZStack {
+                                    Circle()
+                                        .fill(
+                                            LinearGradient(
+                                                colors: [.red, .purple, .blue],
+                                                startPoint: .topLeading,
+                                                endPoint: .bottomTrailing
+                                            )
+                                        )
+                                        .frame(width: 50, height: 50)
+                                    
+                                    Text("E")
+                                        .font(.system(size: 24, weight: .bold))
+                                        .foregroundColor(.white)
+                                }
+                            }
+                            .padding(.trailing, 20)
+                            .padding(.top, 10)
+                        }
+                        
                         Spacer()
                     }
                     
@@ -92,6 +120,9 @@ struct MapScreen: View {
                     }
                 }
                 .navigationBarHidden(true)
+                .navigationDestination(isPresented: $showProfile) {
+                    ProfileScreen()
+                }
             }
         }
         
@@ -216,7 +247,7 @@ struct MapScreen: View {
                     
                     Spacer()
                     
-                NavigationLink(destination: ScooterDetailScreen()) {
+                    NavigationLink(destination: ScooterDetailScreen()) {
                         HStack(spacing: 8) {
                             Text("UNLOCK")
                                 .font(.system(size: 16, weight: .bold))

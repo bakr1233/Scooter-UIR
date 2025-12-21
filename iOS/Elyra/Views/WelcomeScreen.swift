@@ -15,47 +15,29 @@ struct WelcomeScreen: View {
                         StatusBarView()
                         
                         // Logo Section
-                        HStack(spacing: 10) {
-                            // Logo Icon with Gradient
-                            ZStack {
-                                RoundedRectangle(cornerRadius: 8)
-                                    .fill(
-                                        LinearGradient(
-                                            colors: [.red, .purple, .blue],
-                                            startPoint: .topLeading,
-                                            endPoint: .bottomTrailing
-                                        )
-                                    )
-                                    .frame(width: 40, height: 40)
-                                
-                                Text("e")
-                                    .font(.system(size: 24, weight: .bold))
-                                    .foregroundColor(.white)
-                            }
-                            
-                            // Logo Text with Gradient
-                            Text("Elyra")
-                                .font(.system(size: 28, weight: .bold))
-                                .foregroundStyle(
-                                    LinearGradient(
-                                        colors: [Color(red: 0.545, green: 0, blue: 0), .purple],
-                                        startPoint: .leading,
-                                        endPoint: .trailing
-                                    )
-                                )
+                        HStack {
+                            Image("ElyraLogo")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 200)
                         }
                         .padding(.horizontal, 20)
-                        .padding(.top, 20)
+                        .padding(.top, -50)
+                        .padding(.bottom, -55)
                         
-                        // Scooter Visualization
-                        ScooterView()
+                        // Scooter Image
+                        Image("ScooterImage")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
                             .frame(maxWidth: .infinity)
-                            .frame(height: geometry.size.height * 0.4)
+                            .frame(height: geometry.size.height * 0.48)
+                            .padding(.horizontal, 20)
+                            .padding(.top, -25)
                         
-                        Spacer()
+                        Spacer(minLength: 0)
                         
                         // Welcome Section
-                        VStack(alignment: .leading, spacing: 15) {
+                        VStack(alignment: .leading, spacing: 10) {
                             HStack(spacing: 4) {
                                 Text("Welcome")
                                     .font(.system(size: 36, weight: .bold))
@@ -64,15 +46,25 @@ struct WelcomeScreen: View {
                                 Circle()
                                     .fill(Color.red)
                                     .frame(width: 8, height: 8)
+                                    .offset(y: 12)
                             }
+                            .padding(.bottom, 2)
                             
-                            (Text("Bienvenue chez ") + Text("Elyra").fontWeight(.semibold).foregroundColor(.white) + Text(" — la solution de mobilité électrique qui facilite les déplacements au sein du campus. Grâce à nos scooters écologiques et silencieux, se déplacer entre les bâtiments devient plus rapide, pratique et respectueux de l'environnement. Avec Elyra, la mobilité universitaire entre dans une nouvelle ère."))
+                            (
+                                Text("Bienvenue chez ")
+                                + Text("Elyra").fontWeight(.semibold).foregroundColor(.red)
+                                + Text(" — la solution de mobilité électrique qui facilite les déplacements au sein du campus. Grâce à nos scooters écologiques et silencieux, se déplacer entre les bâtiments devient plus rapide, pratique et respectueux de l'environnement. Avec ")
+                                + Text("Elyra").fontWeight(.semibold).foregroundColor(.red)
+                                + Text(", la mobilité universitaire change d'époque.")
+                            )
                                 .font(.system(size: 15))
                                 .foregroundColor(Color(white: 0.8))
                                 .lineSpacing(4)
+                                .fixedSize(horizontal: false, vertical: true)
                         }
                         .padding(.horizontal, 20)
-                        .padding(.bottom, 30)
+                        .padding(.top, -40)
+                        .padding(.bottom, 15)
                         
                         // Get Started Button
                         NavigationLink(destination: LoginScreen()) {
@@ -105,7 +97,7 @@ struct WelcomeScreen: View {
                             .cornerRadius(30)
                         }
                         .padding(.horizontal, 20)
-                        .padding(.bottom, 40)
+                        .padding(.bottom, 30)
                     }
                 }
             }
